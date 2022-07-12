@@ -64,7 +64,7 @@ else
 ifeq ($(ETRACE_ENABLE),1)
 COPTFLAGS      := -O3
 else
-COPTFLAGS      := -O3 -fomit-frame-pointer
+COPTFLAGS      := -O3 
 endif
 endif
 
