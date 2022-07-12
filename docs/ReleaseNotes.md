@@ -224,7 +224,7 @@ Build system:
 - Added configure support for Intel oneAPI via the `CC` environment variable. (Ajay Panyala, Devin Matthews)
 - Use `-O2` for all framework code, potentially avoiding intermitten issues with `f2c`'ed packed and banded code. (Devin Matthews)
 - Tweaked `zen2` subconfiguration's cache blocksizes and registered full suite of `sgemm` and `dgemm` millikernels.
-- Use the `` compiler optimization option in the `haswell` and `skx` subconfigurations. (Jeff Diamond, Devin Matthews)
+- Use the `-fomit-frame-pointer` compiler optimization option in the `haswell` and `skx` subconfigurations. (Jeff Diamond, Devin Matthews)
 - Tweaked Makefiles in `test`, `test/3`, and `test/sup` so that running any of the usual targets without having first built BLIS results in a helpful error message.
 - Add support for `--complex-return=[gnu|intel]` to `configure`, which allows the user to toggle between the GNU and Intel return value conventions for functions such as `cdotc`, `cdotu`, `zdotc`, and `zdotu`.
 - Updates to `cortexa9`, `cortexa53` compilation flags. (Dave Love)
