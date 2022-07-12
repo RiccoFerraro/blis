@@ -28,7 +28,7 @@ MBLAS_LIB      := $(MKL_PATH)/lib/em64t/libmkl_solver_lp64_sequential.a \
 
 CC             := gcc
 CFLAGS         := -I$(INC_PATH) \
-                  -O2 -fomit-frame-pointer \
+                  -O2  \
                   -std=c99 \
                   -Wall -Wno-comment #-pg #-g
 
