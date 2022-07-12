@@ -188,7 +188,7 @@ which are likely more general-purpose than the `CFLAGS` used for, say,
 optimized kernels or even reference kernels:
 ```
 # Example optimized kernel CFLAGS used by 'haswell' sub-configuration
--O3 -fomit-frame-pointer -mavx2 -mfma -mfpmath=sse -march=haswell -Wall
+-O3  -mavx2 -mfma -mfpmath=sse -march=haswell -Wall
 -Wno-unused-function -Wfatal-errors -fPIC -std=c99 -D_POSIX_C_SOURCE=200112L
 -Iinclude/haswell -I./frame/3/ -I./frame/1m/ -I./frame/1f/ -I./frame/1/
 -I./frame/include -DBLIS_VERSION_STRING=\"0.8.1-195\" -fvisibility=hidden

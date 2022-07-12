@@ -4242,10 +4242,10 @@ commit 5fc701ac5f94c6300febbb2f24e731aa34f0f34a
 Author: Field G. Van Zee <field@cs.utexas.edu>
 Date:   Wed Jul 1 15:48:58 2020 -0500
 
-    Added -fomit-frame-pointer option to CKOPTFLAGS.
+    Added  option to CKOPTFLAGS.
     
     Details:
-    - Added the -fomit-frame-pointer compiler option to the CKOPTFLAGS
+    - Added the  compiler option to the CKOPTFLAGS
       variable in the following make_defs.mk files:
         config/haswell/make_defs.mk
         config/skx/make_defs.mk
@@ -4261,7 +4261,7 @@ Date:   Wed Jul 1 15:48:58 2020 -0500
       which feeds into the make_defs.mk for both zen and zen2 subconfigs,
       was also touched, but only to add a commented-out compiler option
       (and the aforementioned explanatory comment) since that file already
-      uses -fomit-frame-pointer in COPTFLAGS, which forms the basis of
+      uses  in COPTFLAGS, which forms the basis of
       CKOPTFLAGS.
 
 commit 6af59b705782dada47e45df6634b479fe781d4fe
@@ -25737,7 +25737,7 @@ Date:   Mon Jun 3 16:54:52 2013 -0500
     Details:
     - Updated level-1/-1f kernels so that non-unit and un-aligned cases are
       handled by reference implementation (rather than aborted).
-    - Added -fomit-frame-pointer to default make_defs.mk for clarksville
+    - Added  to default make_defs.mk for clarksville
       configuration.
     - Defined bli_offset_from_alignment() macro.
     - Minor edits to old test drivers.
