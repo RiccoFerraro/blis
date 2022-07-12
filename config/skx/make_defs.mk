@@ -61,9 +61,9 @@ COPTFLAGS      := -O2
 endif
 
 # Flags specific to optimized kernels.
-# NOTE: The  option is needed for some kernels because
+# NOTE: The -fomit-frame-pointer option is needed for some kernels because
 # they make explicit use of the rbp register.
-CKOPTFLAGS     := $(COPTFLAGS) -O3 
+CKOPTFLAGS     := $(COPTFLAGS) -O3 -fomit-frame-pointer
 ifeq ($(CC_VENDOR),gcc)
 CKVECFLAGS     := -mavx512f -mavx512dq -mavx512bw -mavx512vl -mfpmath=sse -march=skylake-avx512
 else

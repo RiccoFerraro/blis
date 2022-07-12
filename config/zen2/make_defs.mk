@@ -57,11 +57,11 @@ endif
 ifeq ($(DEBUG_TYPE),noopt)
 COPTFLAGS      := -O0
 else
-COPTFLAGS      := -O2 
+COPTFLAGS      := -O2 -fomit-frame-pointer
 endif
 
 # Flags specific to optimized and reference kernels.
-# NOTE: The  option is needed for some kernels because
+# NOTE: The -fomit-frame-pointer option is needed for some kernels because
 # they make explicit use of the rbp register.
 CKOPTFLAGS         := $(COPTFLAGS) -O3
 CROPTFLAGS         := $(CKOPTFLAGS)

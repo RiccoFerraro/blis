@@ -61,9 +61,9 @@ COPTFLAGS      := -O3
 endif
 
 # Flags specific to optimized and reference kernels.
-# NOTE: The  option is needed for some kernels because
+# NOTE: The -fomit-frame-pointer option is needed for some kernels because
 # they make explicit use of the rbp register.
-CKOPTFLAGS         := $(COPTFLAGS) 
+CKOPTFLAGS         := $(COPTFLAGS) -fomit-frame-pointer
 CROPTFLAGS         := $(CKOPTFLAGS)
 CKVECFLAGS         := -mavx2 -mfma -mfpmath=sse
 CRVECFLAGS         := $(CKVECFLAGS) -funsafe-math-optimizations -ffp-contract=fast
